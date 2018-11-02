@@ -19,6 +19,11 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => '1.0'], function () {
 
+	//Consta Cloud
+
+	Route::post('addCourse', 'API\V1\CourseraController@addCourse');
+    Route::get('getData', 'API\V1\TestController@getData');
+
     //Cousera
    
     Route::post('addCourse', 'API\V1\CourseraController@addCourse');

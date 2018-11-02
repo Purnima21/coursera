@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('getData', function()
+ {
+     return view('getData');
+});
 
 Route::get('addCourse', function()
-  {
+ {
      return view('addCourse');
 });
 

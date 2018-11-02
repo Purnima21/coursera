@@ -58,9 +58,9 @@ class CourseraController extends BaseController
 	    	if(isset($data['pagesize']) && !empty($data['pagesize'])) {
 	    		$pageSize = $data['pagesize'];
 	    	}
-	    		$profiles = Coursera::select('courseType','id','slug','name')
-	        		->paginate($pageSize);
-	      return $this->respondWithSuccess($profiles);
+    		$profiles = Coursera::select('courseType','id','slug','name')
+        	->paginate($pageSize);
+        	return $this->respondWithSuccess($profiles);
 	    }
 	    catch (\Exception $exception){
 	      return $this->respondWithError($exception->getMessage());
